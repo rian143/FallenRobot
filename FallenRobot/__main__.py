@@ -87,13 +87,13 @@ PM_START_TEXT = """
 ➻ ᴛʜᴇ ᴍᴏsᴛ ᴩᴏᴡᴇʀғᴜʟ ᴛᴇʟᴇɢʀᴀᴍ ɢʀᴏᴜᴩ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ʙᴏᴛ ᴡɪᴛʜ sᴏᴍᴇ ᴀᴡᴇsᴏᴍᴇ ᴀɴᴅ ᴜsᴇғᴜʟ ғᴇᴀᴛᴜʀᴇs.
 
 ──────────────────
-*๏ ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʜᴇʟᴩ ʙᴜᴛᴛᴏɴ ᴛᴏ ɢᴇᴛ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ᴀʙᴏᴜᴛ ᴍʏ ᴍᴏᴅᴜʟᴇs ᴀɴᴅ ᴄᴏᴍᴍᴀɴᴅs.*
+*๏ ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ /help ʙᴜᴛᴛᴏɴ ᴛᴏ ɢᴇᴛ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ᴀʙᴏᴜᴛ ᴍʏ ᴍᴏᴅᴜʟᴇs ᴀɴᴅ ᴄᴏᴍᴍᴀɴᴅs.*
 """
 
 buttons = [
     [
         InlineKeyboardButton(
-            text="ᴀᴅᴅ ᴍᴇ ᴇʟsᴇ ʏᴏᴜ ɢᴇʏ",
+            text="ᴀᴘɴᴇ ᴇᴅᴀ ɢᴘ ᴍᴇ ᴀᴅᴅ ᴋʀ",
             url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
         ),
     ],
@@ -106,7 +106,7 @@ buttons = [
     ],
     [
         InlineKeyboardButton(text="🥀 ᴅᴇᴠᴇʟᴏᴩᴇʀ 🥀", url=f"tg://user?id={OWNER_ID}"),
-        InlineKeyboardButton(text="☁️ sᴏᴜʀᴄᴇ ☁️", callback_data="source_"),
+        InlineKeyboardButton(text="☁️ ʀᴇᴄɪᴘᴇ ☁️", callback_data="source_"),
     ],
 ]
 
@@ -229,7 +229,7 @@ def start(update: Update, context: CallbackContext):
     else:
         update.effective_message.reply_photo(
             START_IMG,
-            caption="ɪ ᴀᴍ ᴀʟɪᴠᴇ ʙᴀʙʏ !\n<b>ɪ ᴅɪᴅɴ'ᴛ sʟᴇᴘᴛ sɪɴᴄᴇ​:</b> <code>{}</code>".format(
+            caption="ɪ ᴀᴍ ᴀʟɪᴠᴇ ʙᴀᴍʙʏ !\n<b>ɪ ᴅɪᴅɴ'ᴛ sʟᴇᴘᴛ sɪɴᴄᴇ​:</b> <code>{}</code>".format(
                 uptime
             ),
             parse_mode=ParseMode.HTML,
@@ -391,7 +391,7 @@ def Fallen_about_callback(update: Update, context: CallbackContext):
                     ],
                     [
                         InlineKeyboardButton(
-                            text="ᴅᴇᴠᴇʟᴏᴩᴇʀ", url=f"tg://user?id={OWNER_ID}"
+                            text="ᴘᴀᴘᴀ", url=f"tg://user?id={OWNER_ID}"
                         ),
                         InlineKeyboardButton(
                             text="sᴏᴜʀᴄᴇ",
@@ -434,7 +434,7 @@ def Fallen_about_callback(update: Update, context: CallbackContext):
                 ]
             ),
         )
-    elif query.data == "fallen_back":
+    elif query.data == "fellen_back":
         first_name = update.effective_user.first_name
         query.message.edit_text(
             PM_START_TEXT.format(escape_markdown(first_name), BOT_NAME),
